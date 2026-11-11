@@ -5,6 +5,21 @@ microcontrolador Raspberry Pi Pico, utilizando sensores MAX30102 e MLX90614,
 com feedback visual através de LED RGB, display OLED SSD1306, buzzer para alertas
 e controle via botão para iniciar medições.
 
+## Leitura rápida
+
+Protótipo acadêmico em **C / Pico SDK**, com integração de sensores por I2C,
+processamento de sinais e indicação por OLED, LEDs e buzzer.
+
+| O que revisar | Arquivo |
+|---|---|
+| Ciclo de medição e integração | [src/main.c](src/main.c) |
+| Leitura dos sensores | [src/max30102.c](src/max30102.c) e [src/mlx90614.c](src/mlx90614.c) |
+| Configurações e pinos | [inc/config.h](inc/config.h) |
+| Compilação | [CMakeLists.txt](CMakeLists.txt) |
+
+A execução requer hardware e Pico SDK. O projeto é um protótipo educacional;
+as limitações de medição estão descritas neste documento.
+
 ## 📋 Descrição do Sistema
 
 O sistema implementa um monitor de sinais vitais que utiliza sensores biomédicos
@@ -351,8 +366,8 @@ O sistema utiliza os seguintes algoritmos para processamento de sinais e convers
 ### 1. Clonar o Repositório
 
 ```bash
-git clone <URL_DO_REPOSITORIO>
-cd P3
+git clone https://github.com/enggusttavomn/monitor-de-sinais-vitais-rp2040.git
+cd monitor-de-sinais-vitais-rp2040
 ```
 
 ### 2. Configurar e Executar no VSCode
